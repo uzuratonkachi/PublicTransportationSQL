@@ -99,6 +99,7 @@ HAVING available_seats > 0;
 ```bash
 git clone https://github.com/yourusername/PublicTransportationSQL.git
 cd PublicTransportationSQL
+```
 2.**Open MySQL Workbench and connect to your MySQL server.**
 
 3. **Create the database:**
