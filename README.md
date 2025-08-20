@@ -59,20 +59,8 @@ JOIN Schedules s ON t.schedule_id = s.schedule_id
 JOIN Routes r ON s.route_id = r.route_id
 GROUP BY r.route_name
 ORDER BY tickets_sold DESC;
-
-2 - **Revenue per Route** – Total fare collected per route:
-
-SELECT r.route_name, SUM(t.fare) AS total_revenue
-FROM Tickets t
-JOIN Schedules s ON t.schedule_id = s.schedule_id
-JOIN Routes r ON s.route_id = r.route_id
-WHERE t.payment_status = 'Paid'
-GROUP BY r.route_name
-ORDER BY total_revenue DESC;
-
 ---
-
-## ⚡ How to Run
+#### ⚡ How to Run
 
 1. **Clone the repository:**
 
