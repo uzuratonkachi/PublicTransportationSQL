@@ -104,9 +104,9 @@ cd PublicTransportationSQL
 
 3. **Create the database:**
    ```bash
-  CREATE DATABASE transport_db;
-  USE transport_db;
-  ``
+     CREATE DATABASE transport_db;
+     USE transport_db;
+     ```
 
 4. **Load the schema (tables):**
     ```bash
