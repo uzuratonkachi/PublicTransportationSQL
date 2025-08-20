@@ -70,6 +70,8 @@ WHERE t.payment_status = 'Paid'
 GROUP BY r.route_name
 ORDER BY total_revenue DESC;
 
+---
+
 ## ⚡ How to Run
 
 1. **Clone the repository:**
