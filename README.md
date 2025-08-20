@@ -100,21 +100,26 @@ HAVING available_seats > 0;
 git clone https://github.com/yourusername/PublicTransportationSQL.git
 cd PublicTransportationSQL
 ```
-2.**Open MySQL Workbench and connect to your MySQL server.**
+2. **Open MySQL Workbench and connect to your MySQL server.**
 
 3. **Create the database:**
-
-CREATE DATABASE transport_db;
-USE transport_db;
+   ```bash
+  CREATE DATABASE transport_db;
+  USE transport_db;
+  ``
 
 4. **Load the schema (tables):**
-
-SOURCE path/to/schema.sql;
-
+    ```bash
+    SOURCE path/to/schema.sql;
+    ```
 5. **Insert sample data:**
+   ```bash
 
-SOURCE path/to/sample_data.sql;
+    SOURCE path/to/sample_data.sql;
+   ```
 
 6.**Run the queries:**
+```bash
 
-SOURCE path/to/queries.sql;
+    SOURCE path/to/queries.sql;
+```
