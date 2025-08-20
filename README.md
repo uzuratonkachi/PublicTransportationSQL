@@ -59,8 +59,10 @@ JOIN Schedules s ON t.schedule_id = s.schedule_id
 JOIN Routes r ON s.route_id = r.route_id
 GROUP BY r.route_name
 ORDER BY tickets_sold DESC;
+
 ---
-#### ⚡ How to Run
+
+## ⚡ How to Run
 
 1. **Clone the repository:**
 
