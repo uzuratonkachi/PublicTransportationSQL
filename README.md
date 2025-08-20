@@ -123,3 +123,19 @@ cd PublicTransportationSQL
 
     SOURCE path/to/queries.sql;
 ```
+---
+## 📷 Outputs 
+### Screenshot 1
+(outputs/output_1.png)
+
+### Screenshot 2
+(outputs/output_2.png)
+
+### Screenshot 3
+(outputs/output_3.png)
+
+### Screenshot 4
+(outputs/output_4.png)
+
+
+
