@@ -60,6 +60,36 @@ JOIN Routes r ON s.route_id = r.route_id
 GROUP BY r.route_name
 ORDER BY tickets_sold DESC;
 
+```
+2.**Passenger Count per vehicle** -  Find the number of passengers assigned to each vehicle:
+```sql
+SELECT v.vehicle_id, v.vehicle_type, COUNT(t.ticket_id) AS passenger_count
+FROM Vehicles v
+JOIN Schedules s ON v.vehicle_id = s.vehicle_id
+JOIN Tickets t ON s.schedule_id = t.schedule_id
+GROUP BY v.vehicle_id, v.vehicle_type
+ORDER BY passenger_count DESC;
+```
+
+3. **Revenue per Route** - Calculate total revenue generated for each route:
+```sql
+SELECT r.route_name, SUM(t.fare) AS total_revenue
+FROM Tickets t
+JOIN Schedules s ON t.schedule_id = s.schedule_id
+JOIN Routes r ON s.route_id = r.route_id
+GROUP BY r.route_name
+ORDER BY total_revenue DESC;
+```
+5. **Schedules with Available Seats** - Find schedules that still have available seats:
+```sql
+SELECT s.schedule_id, r.route_name, v.vehicle_type, (v.capacity - COUNT(t.ticket_id)) AS available_seats
+FROM Schedules s
+JOIN Vehicles v ON s.vehicle_id = v.vehicle_id
+JOIN Routes r ON s.route_id = r.route_id
+LEFT JOIN Tickets t ON s.schedule_id = t.schedule_id
+GROUP BY s.schedule_id, r.route_name, v.vehicle_type, v.capacity
+HAVING available_seats > 0;
+```
 ---
 
 ## ⚡ How to Run
